@@ -4,11 +4,11 @@ class FishApp < Sinatra::Base
 
   def initialize
     super
-    @fish = ["Marty", "Doc", "Einstein", "Biff", "George", "Elaine", "Libyans"]
+    @fish = ["Marty", "Doc", "Biff"]
   end
 
   get "/" do
-    erb :index
+    erb :index, :locals => {:fish => @fish}
   end
 
 end
